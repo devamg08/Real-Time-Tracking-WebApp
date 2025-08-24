@@ -1,4 +1,4 @@
-Live, Zomato/Swiggy-style tracking in your browser.
+<img width="1040" height="180" alt="image" src="https://github.com/user-attachments/assets/8041a328-c155-4a9a-ad04-cb0da1cce100" />Live, Zomato/Swiggy-style tracking in your browser.
 A device streams its GPS location to a Node.js server over Socket.IO,
 and a Leaflet web map updates markers in real time.
 
@@ -19,15 +19,6 @@ and a Leaflet web map updates markers in real time.
 
 🧱 Room-based isolation (optional): Group devices by order/trip/tenant
 
-
-
-
-Device (Browser)                      Server (Node + Socket.IO)                 Viewer (Map UI)
------------------                     ---------------------------               ----------------
-navigator.geolocation  --emit-->  send-location {lat,lng,id}   --broadcast--> receive-location
-                ▲                                                                        |
-                │                                             │
-                └-- watchPosition         └-- tracks last known per socket               └-- Leaflet marker setLatLng(...)
 
 
 
