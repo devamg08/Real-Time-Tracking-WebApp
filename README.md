@@ -20,10 +20,13 @@ and a Leaflet web map updates markers in real time.
 🧱 Room-based isolation (optional): Group devices by order/trip/tenant
 
 
+
+
 Device (Browser)                      Server (Node + Socket.IO)                 Viewer (Map UI)
 -----------------                     ---------------------------               ----------------
 navigator.geolocation  --emit-->  send-location {lat,lng,id}   --broadcast--> receive-location
-                ▲                         │                                             │
+                ▲                                                                        |
+                │                                             │
                 └-- watchPosition         └-- tracks last known per socket               └-- Leaflet marker setLatLng(...)
 
 
